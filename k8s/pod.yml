@@ -1,0 +1,16 @@
+---
+apiversion : v1
+kind : Pod
+metadata :
+  name : openmrscore
+  labels :
+    app : openmrscore
+    version : 2.4.0
+spec :
+  containers:
+    - name : openmrscore 
+      image : sunilkumardasu/openmrs-core2.4.0
+      Ports :
+        - containerport : 8080
+          protocal : tcp
+           

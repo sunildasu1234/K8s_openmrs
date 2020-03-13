@@ -1,0 +1,24 @@
+---
+apiversion : v1
+kind : Pod
+metadata :
+  name : mysql
+  labels :
+    app: db
+    ver: 5.6
+spec :
+  containers:
+    - name : mysql 
+      image : mysql:5.6
+      Ports :
+        - containerport : 3306
+          protocal : tcp
+      env:
+       - name: 'MYSQL_ROOT_PASSWORD'
+         value: 'password'
+       - name: 'MYSQL_DATABASE'
+         value: 'openmrs'
+       - name: 'MYSQL_USER'
+         value: 'sunildasu'
+       - name: 'MYSQL_PASSWORD'
+         value: 'sunildasu'  
